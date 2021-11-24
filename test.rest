@@ -73,3 +73,15 @@ content-type: application/json
         }
     ]
 }
+
+
+
+### nested users UPDATE
+PATCH {{url}}/nestedUsers/update/619e3e2d5e4b9df46b6d7d68
+content-type: application/json
+ 
+{
+    "name": "Stephanie Changed",
+    "address.street": "changed street",
+    "accountHistory.2.amount": 999
+}
