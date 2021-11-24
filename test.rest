@@ -31,3 +31,8 @@ content-type: application/json
 ### nested users READ
 GET {{url}}/nestedUsers
 content-type: application/json
+
+
+### nested users READ
+GET {{url}}/nestedUsers/emails
+content-type: application/json

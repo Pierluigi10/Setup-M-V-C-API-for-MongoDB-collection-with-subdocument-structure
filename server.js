@@ -47,14 +47,19 @@ app.delete('/simpleUsers/delete/:id', async (req, res) => {
 
 //NESTED users
 
-// nested users: READ
+// nested users: READ all 
 app.get('/nestedUsers', async (req, res) => {
     res.json({
         nestedUsers: await NestedUsersController.getAllNestedUsers()
     });
 });
 
-
+// nested users: READ all emails
+app.get('/nestedUsers/emails', async (req, res) => {
+    res.json({
+        nestedUsers: await NestedUsersController.getAllNestedUsersEmails()
+    });
+});
 
 app.listen(port, () => {
   console.log(`API is now listening on port http://localhost:${port}`);
