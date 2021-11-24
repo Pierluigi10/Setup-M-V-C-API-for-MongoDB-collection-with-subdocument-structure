@@ -1,1 +1,5 @@
 @url = http://localhost:3035
+
+### simple users READ
+GET {{url}}/simpleUsers
+content-type: application/json
