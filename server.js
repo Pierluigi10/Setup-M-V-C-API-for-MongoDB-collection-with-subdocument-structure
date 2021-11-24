@@ -16,6 +16,15 @@ app.get("/simpleUsers", async (req, res) => {
   });
 });
 
+// simple users: CREATE
+app.post('/simpleUsers/create', async (req, res) => {
+    const simpleUserObj = req.body;
+    const result = await SimpleUsersController.createSimpleUser(simpleUserObj);
+    res.json({
+        result
+    });
+});
+
 app.listen(port, () => {
   console.log(`API is now listening on port http://localhost:${port}`);
 });

@@ -3,3 +3,12 @@
 ### simple users READ
 GET {{url}}/simpleUsers
 content-type: application/json
+
+### simple users CREATE
+POST {{url}}/simpleUsers/create
+content-type: application/json
+ 
+{
+    "firstName": "Andre",
+    "lastName": "Hackerkrug"
+}
