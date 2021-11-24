@@ -81,6 +81,15 @@ app.patch("/nestedUsers/update/:id", async (req, res) => {
   });
 });
 
+// nested users: DELETE
+app.delete('/nestedUsers/delete/:id', async (req, res) => {
+    const id = req.params.id;
+    const result = await NestedUsersController.deleteNestedUser(id);
+    res.json({
+        result
+    });
+});
+
 app.listen(port, () => {
   console.log(`API is now listening on port http://localhost:${port}`);
 });
