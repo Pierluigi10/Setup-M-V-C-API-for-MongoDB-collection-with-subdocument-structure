@@ -61,6 +61,17 @@ app.get('/nestedUsers/emails', async (req, res) => {
     });
 });
 
+// nested users: CREATE
+app.post('/nestedUsers/create', async (req, res) => {
+    const nestedUserObj = req.body;
+    await NestedUsersController.createNestedUser(nestedUserObj, (result) => {
+        res.json({
+            result
+        });
+    });
+});
+
+
 app.listen(port, () => {
   console.log(`API is now listening on port http://localhost:${port}`);
 });
