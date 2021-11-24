@@ -1,1 +1,2 @@
 mongoimport --db test --collection simpleusers --type json --file simpleusers.json --jsonArray
+mongoimport --db test --collection nestedusers --type json --file nestedusers.json --jsonArray

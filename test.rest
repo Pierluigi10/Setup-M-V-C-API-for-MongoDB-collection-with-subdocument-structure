@@ -25,3 +25,9 @@ content-type: application/json
 ### simple users DELETE
 DELETE {{url}}/simpleUsers/delete/619e0fbf2a641d90d72bab17
 content-type: application/json
+
+
+
+### nested users READ
+GET {{url}}/nestedUsers
+content-type: application/json

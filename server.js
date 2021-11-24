@@ -1,5 +1,6 @@
 import express from "express";
 import * as SimpleUsersController from "./controllers/simpleUsersController.js";
+import * as NestedUsersController from './controllers/nestedUsersController.js';
 import mongoose from "mongoose";
 
 mongoose.connect("mongodb://localhost:27017/test");
@@ -43,6 +44,17 @@ app.delete('/simpleUsers/delete/:id', async (req, res) => {
         result
     });
 });
+
+//NESTED users
+
+// nested users: READ
+app.get('/nestedUsers', async (req, res) => {
+    res.json({
+        nestedUsers: await NestedUsersController.getAllNestedUsers()
+    });
+});
+
+
 
 app.listen(port, () => {
   console.log(`API is now listening on port http://localhost:${port}`);
