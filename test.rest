@@ -12,3 +12,11 @@ content-type: application/json
     "firstName": "Andre",
     "lastName": "Hackerkrug"
 }
+
+### simple users UPDATE
+PATCH {{url}}/simpleUsers/update/619e0fbf2a641d90d72bab17
+content-type: application/json
+ 
+{
+    "lastName": "Lastname-Changed"
+}

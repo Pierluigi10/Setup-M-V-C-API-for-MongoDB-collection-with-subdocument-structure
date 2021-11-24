@@ -25,6 +25,16 @@ app.post('/simpleUsers/create', async (req, res) => {
     });
 });
 
+// simple users: UPDATE
+app.patch('/simpleUsers/update/:id', async (req, res) => {
+    const id = req.params.id;
+    const updateFields = req.body
+    const result = await SimpleUsersController.updateSimpleUser(id, updateFields);
+    res.json({
+        result
+    });
+});
+
 app.listen(port, () => {
   console.log(`API is now listening on port http://localhost:${port}`);
 });
