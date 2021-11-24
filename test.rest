@@ -20,3 +20,8 @@ content-type: application/json
 {
     "lastName": "Lastname-Changed"
 }
+
+
+### simple users DELETE
+DELETE {{url}}/simpleUsers/delete/619e0fbf2a641d90d72bab17
+content-type: application/json
