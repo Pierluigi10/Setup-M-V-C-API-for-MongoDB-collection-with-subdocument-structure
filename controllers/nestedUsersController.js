@@ -15,15 +15,25 @@ export const getAccountHistoryOfNestedUser = async (id) => {
     });
 }
  
-export const createNestedUser = async (nestedUserObj, callback) => {
-    const nestedUser = new NestedUsersModel(nestedUserObj);
-    const result = nestedUser.save((err, docs) => {
-        if (err) {
-            callback(err);
-        } else {
-            callback(docs);
-        }
-    });
+// export const createNestedUser = async (nestedUserObj, callback) => {
+//     const nestedUser = new NestedUsersModel(nestedUserObj);
+//     const result = nestedUser.save((err, docs) => {
+//         if (err) {
+//             callback(err);
+//         } else {
+//             callback(docs);
+//         }
+//     });
+// }
+
+export const createNestedUser = async (nestedUser, callback) => {
+	await NestedUsersModel.create(nestedUser, (err, docs) => {
+		if (err) {
+			callback(err);
+		} else {
+			callback(docs);
+		}
+	});
 }
  
 export const deleteNestedUser = async (id) => {
